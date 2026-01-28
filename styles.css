@@ -6,3 +6,8 @@ body {
 header {
     text-align: center;
 }
+
+img {
+    height: 300px;
+    width: 550px;
+}
