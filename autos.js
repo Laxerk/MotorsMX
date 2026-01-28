@@ -24,7 +24,7 @@ const autos = [
     año: 2024,
     tipo: "SUV",
     precio: 480000,
-    imagen: "https://www.elcarrocolombiano.com/wp-content/uploads/2023/11/20231103MazdaCX52024AA.jpg"
+    imagen: "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_3eb836d3741b4f24a1641202bd150f4f.webp"
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const autos = [
     año: 2024,
     tipo: "Deportivo",
     precio: 850000,
-    imagen: "https://carnovo.com/wp-content/uploads/2024/02/ford-mustang-2024-1.jpg"
+    imagen: "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/s/RT_V_8a256cee2c51489a9b2d7f7144d5645c.webp"
   },
   {
     id: 5,
@@ -42,6 +42,6 @@ const autos = [
     año: 2024,
     tipo: "Sedán",
     precio: 290000,
-    imagen: "https://fotos.perfil.com/2024/04/03/chevrolet-onix-plus-1778895.jpg"
+    imagen: "https://www.chevroletze.com.mx/content/dam/chevrolet/na/mx/es/index/cars/2024-onix/colorizer/01-images/blanco.jpg?imwidth=960"
   }
 ];
