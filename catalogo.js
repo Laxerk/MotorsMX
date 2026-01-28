@@ -21,7 +21,7 @@ function mostrarAutos(listaAutos) {
 
         tarjeta.querySelector(".btn-cotizar").addEventListener("click", () => {
             localStorage.setItem("autoSeleccionado", JSON.stringify(auto));
-            window.location.href = "cotizador.html";
+            window.location.href = "paginapacotizar.html";
         });
 
         contenedor.appendChild(tarjeta);
