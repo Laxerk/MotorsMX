@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizar Auto - MotorsMX</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <img class="logo" src="/img/logoLetra.png" alt="Logo"> <p>Estás a un paso de estrenar</p>
+    </header>
+
+    <main class="contenedor-cotizacion">
+        <a href="index.html" class="btn-volver">← Volver al catálogo</a>
+        
+        <div class="grid-cotizacion">
+            <div class="resumen-auto" id="resumenAuto">
+                <p>Cargando auto...</p>
+            </div>
+
+            <div class="formulario-container">
+                <h2>Completa tus datos</h2>
+                <form id="formCotizacion">
+                    <div class="campo">
+                        <label>Nombre completo:</label>
+                        <input type="text" placeholder="Ej. Juan Pérez" required>
+                    </div>
+                    
+                    <div class="campo">
+                        <label>Correo electrónico:</label>
+                        <input type="email" placeholder="juan@ejemplo.com" required>
+                    </div>
+
+                    <div class="campo">
+                        <label>Enganche inicial (%):</label>
+                        <select id="enganche">
+                            <option value="10">10%</option>
+                            <option value="20" selected>20%</option>
+                            <option value="30">30%</option>
+                            <option value="50">50%</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label>Plazo (Meses):</label>
+                        <select id="plazo">
+                            <option value="12">12 Meses</option>
+                            <option value="24">24 Meses</option>
+                            <option value="48" selected>48 Meses</option>
+                            <option value="60">60 Meses</option>
+                        </select>
+                    </div>
+
+                    <div class="calculo-mensualidad">
+                        <p>Mensualidad estimada:</p>
+                        <h3 id="mensualidad">$0.00</h3>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Solicitar Cotización</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="finalP">
+        <p>MotorsMX - Concesionaria Taller | Cotiza ahora mismo</p>
+    </footer>
+
+    <script src="cotizar.js"></script>
+</body>
+</html>

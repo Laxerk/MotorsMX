@@ -143,3 +143,25 @@ header p {
         align-items: center;
     }
 }
+
+.mensaje-vacio {
+    text-align: center;
+    width: 100%;
+    grid-column: 1 / -1; 
+    padding: 40px;
+    color: #666;
+}
+
+.btn-limpiar {
+    padding: 10px 15px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-limpiar:hover {
+    background-color: #c0392b;
+}

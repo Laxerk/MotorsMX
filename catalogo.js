@@ -6,6 +6,16 @@ const filtroPrecio = document.getElementById("filtroPrecio");
 function mostrarAutos(listaAutos) {
     contenedor.innerHTML = "";
 
+    if (listaAutos.length === 0) {
+        contenedor.innerHTML = `
+            <div class="mensaje-vacio">
+                <h3>No encontramos resultados </h3>
+                <p>Intenta ajustar los filtros o buscar otra marca.</p>
+            </div>
+        `;
+        return;
+    }
+
     listaAutos.forEach(auto => {
         const tarjeta = document.createElement("div");
         tarjeta.classList.add("tarjeta-auto");
