@@ -165,3 +165,119 @@ header p {
 .btn-limpiar:hover {
     background-color: #c0392b;
 }
+
+
+
+.contenedor-cotizacion {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #1f3b73;
+    font-weight: bold;
+}
+
+.grid-cotizacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+
+.resumen-auto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.resumen-auto h2 {
+    font-size: 2rem;
+    color: #111;
+}
+
+.precio-grande {
+    font-size: 1.8rem;
+    color: #1f3b73;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.resumen-auto hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+
+.formulario-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.campo input, .campo select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.calculo-mensualidad {
+    background-color: #f0f4ff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px 0;
+    border: 1px solid #d0e1ff;
+}
+
+.calculo-mensualidad h3 {
+    color: #1f3b73;
+    font-size: 1.8rem;
+    margin-top: 5px;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background-color: #27ae60;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #219150;
+}
+
+
+@media (max-width: 768px) {
+    .grid-cotizacion {
+        grid-template-columns: 1fr; 
+    }
+}
