@@ -24,7 +24,7 @@ const autos = [
     año: 2024,
     tipo: "SUV",
     precio: 480000,
-    imagen: "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_3eb836d3741b4f24a1641202bd150f4f.webp"
+    imagen: "https://dealerimages.dealereprocess.com/image/upload/v1692292373/1/mazda/2024_CX5/2024_cx5_2_5_CarbonTurbo_ZirconSand_Car_0000.png"
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const autos = [
     año: 2024,
     tipo: "Deportivo",
     precio: 850000,
-    imagen: "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/s/RT_V_8a256cee2c51489a9b2d7f7144d5645c.webp"
+    imagen: "https://pictures.dealer.com/a/autonationkatyfordfd/1234/3f1b1dbb615643a59dcc8b14a1bfd707.png?impolicy=downsize_bkpt&w=380"
   },
   {
     id: 5,
@@ -42,6 +42,6 @@ const autos = [
     año: 2024,
     tipo: "Sedán",
     precio: 290000,
-    imagen: "https://www.chevroletze.com.mx/content/dam/chevrolet/na/mx/es/index/cars/2024-onix/colorizer/01-images/blanco.jpg?imwidth=960"
+    imagen: "https://xuuplogistic.com.mx/wp-content/uploads/2023/04/Diseno-sin-titulo-62.png"
   }
 ];
