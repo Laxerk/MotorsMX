@@ -3,6 +3,12 @@ const inputBusqueda = document.getElementById("busqueda");
 const filtroTipo = document.getElementById("filtroTipo");
 const filtroPrecio = document.getElementById("filtroPrecio");
 
+// 🔥 AQUÍ guardaremos los autos que vienen del backend
+let autos = [];
+
+// =========================
+// MOSTRAR AUTOS
+// =========================
 function mostrarAutos(listaAutos) {
     contenedor.innerHTML = "";
 
@@ -25,7 +31,7 @@ function mostrarAutos(listaAutos) {
             <h2>${auto.marca} ${auto.modelo}</h2>
             <p class="anio">${auto.año}</p>
             <p class="tipo">${auto.tipo}</p>
-            <p class="precio">$${auto.precio.toLocaleString()}</p>
+            <p class="precio">$${Number(auto.precio).toLocaleString()}</p>
             <button class="btn-cotizar">Cotizar</button>
         `;
 
@@ -38,6 +44,9 @@ function mostrarAutos(listaAutos) {
     });
 }
 
+// =========================
+// FILTRAR AUTOS
+// =========================
 function filtrarAutos() {
     const texto = inputBusqueda.value.toLowerCase();
     const tipo = filtroTipo.value;
@@ -57,8 +66,28 @@ function filtrarAutos() {
     mostrarAutos(autosFiltrados);
 }
 
+// =========================
+// 🔥 CARGAR AUTOS DESDE BACKEND
+// =========================
+async function cargarAutos() {
+    try {
+        const response = await fetch("http://localhost:3000/autos");
+        autos = await response.json();
+
+        console.log("Autos cargados:", autos);
+
+        mostrarAutos(autos); // 👈 mostrar todos al inicio
+    } catch (error) {
+        console.error("Error al cargar autos:", error);
+    }
+}
+
+// =========================
+// EVENTOS
+// =========================
 inputBusqueda.addEventListener("input", filtrarAutos);
 filtroTipo.addEventListener("change", filtrarAutos);
 filtroPrecio.addEventListener("change", filtrarAutos);
 
-mostrarAutos(autos);
+// 🔥 CARGAR AL INICIAR LA PÁGINA
+document.addEventListener("DOMContentLoaded", cargarAutos);
