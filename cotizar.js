@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
 
         if (!inputNombre.value || !inputEmail.value || !inputTelefono.value) {
-            alert("⚠️ Completa todos los campos");
+            alert("Completa todos los campos");
             return;
         }
 
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } catch (error) {
             console.error(error);
-            alert("❌ No se pudo guardar la cotización");
+            alert("No se pudo guardar la cotización");
         }
     });
 });

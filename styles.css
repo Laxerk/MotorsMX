@@ -185,6 +185,7 @@ header p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  justify-items: center;
 }
 
 .tarjeta-auto {
@@ -200,6 +201,8 @@ header p {
   flex-direction: column;
   border: 1px solid rgba(255,255,255,0.05);
   position: relative;
+  max-width: 320px;
+  width: 100%;
 }
 
 @keyframes aparecer {
