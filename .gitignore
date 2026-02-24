@@ -1,13 +1,9 @@
-# Backend
 backend/node_modules/
 backend/.env
 
-# Env (por si algún día agregas uno en raíz)
 .env
 
-# Logs
 npm-debug.log*
 
-# OS
 .DS_Store
 Thumbs.db

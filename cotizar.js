@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const auto = JSON.parse(autoData);
 
-    // ===== RESUMEN AUTO =====
     const contenedorResumen = document.getElementById("resumenAuto");
     contenedorResumen.innerHTML = `
         <img src="${auto.imagen}" alt="${auto.modelo}">
@@ -20,19 +19,16 @@ document.addEventListener("DOMContentLoaded", () => {
         <p>Estás cotizando este vehículo. Ajusta el enganche y plazo para ver tu mensualidad.</p>
     `;
 
-    // ===== ELEMENTOS =====
     const selectEnganche = document.getElementById("enganche");
     const selectPlazo = document.getElementById("plazo");
     const textoMensualidad = document.getElementById("mensualidad");
 
-    // inputs del formulario
     const inputNombre = document.getElementById("nombre");
     const inputEmail = document.getElementById("email");
     const inputTelefono = document.getElementById("telefono");
 
     let mensualidadCalculada = 0;
 
-    // ===== CALCULO =====
     function calcularMensualidad() {
         const precio = auto.precio;
         const porcentajeEnganche = parseInt(selectEnganche.value) / 100;
@@ -58,11 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     calcularMensualidad();
 
-    // ===== SUBMIT → BACKEND =====
     document.getElementById("formCotizacion").addEventListener("submit", async (e) => {
         e.preventDefault();
 
-        // 🔴 VALIDACION BASICA
         if (!inputNombre.value || !inputEmail.value || !inputTelefono.value) {
             alert("⚠️ Completa todos los campos");
             return;
@@ -97,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             modal.classList.remove("oculto");
 
-            // botón volver
             btnVolver.onclick = () => {
                 window.location.href = "index.html";
             };

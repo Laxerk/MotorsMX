@@ -8,12 +8,44 @@
 </head>
 <body>
     
-    <header>
+    <header class="estilo2Body">
         <img class="logo" src="/img/logoLetra.png" alt="Logo">
         <p>
             Encuentra tu futuro auto aqui mismo
         </p>
     </header>
+
+    <section class="hero" class="estilo2Body">
+        <div class="hero-overlay">
+            <div class="hero-content">
+            <h1>Potencia. Precisión. Confianza.</h1>
+            <p>Compra, financia y da mantenimiento a tu auto en un solo lugar.</p>
+            <a href="#contenedorAutos" class="btn-primary">Explorar Autos</a>
+            <a href="#taller" class="btn-secondary">Servicios de Taller</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="taller" class="servicios" class="estilo2Body">
+        <h2>Servicios de Taller</h2>
+
+        <div class="grid-servicios">
+            <div class="servicio-card">
+            <h3>Mantenimiento Preventivo</h3>
+            <p>Cambio de aceite, revisión de frenos y afinación.</p>
+            </div>
+
+            <div class="servicio-card">
+            <h3>Diagnóstico Computarizado</h3>
+            <p>Escaneo profesional con equipo especializado.</p>
+            </div>
+
+            <div class="servicio-card">
+            <h3>Reparaciones Generales</h3>
+            <p>Motor, transmisión y suspensión.</p>
+            </div>
+        </div>
+    </section>
 
     <section class="filtros">
         <input type="text" id="busqueda" placeholder="Buscar modelo o marca...">
@@ -34,14 +66,25 @@
 
     </section>
 
+    
+
     <main id="contenedorAutos">
 
     </main>
 
-    <footer class="finalP">
-        <p>MotorsMX - Concensionaria Taller | Cotiza ahora mismo</p>
+    <div id="visorImagen" class="visor oculto">
+        <span class="cerrar-visor">&times;</span>
+        <img id="imagenAmpliada" src="" alt="Vista previa">
+    </div>
+
+    <footer>
+        <div class="finalP">
+            <p>© 2026 MotorsMX</p>
+            <p>Contacto: ventas@motorsmx.com</p>
+        </div>
     </footer>
 
     <script src="catalogo.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
