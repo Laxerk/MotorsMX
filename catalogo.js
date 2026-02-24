@@ -6,6 +6,8 @@ const filtroPrecio = document.getElementById("filtroPrecio");
 // 🔥 AQUÍ guardaremos los autos que vienen del backend
 let autos = [];
 
+contenedor.innerHTML = "<p>Cargando autos...</p>";
+
 // =========================
 // MOSTRAR AUTOS
 // =========================
@@ -22,9 +24,11 @@ function mostrarAutos(listaAutos) {
         return;
     }
 
-    listaAutos.forEach(auto => {
+    listaAutos.forEach((auto, index) => {
         const tarjeta = document.createElement("div");
         tarjeta.classList.add("tarjeta-auto");
+
+        tarjeta.style.animationDelay = `${index * 0.1}s`;
 
         tarjeta.innerHTML = `
             <img src="${auto.imagen}" alt="${auto.marca} ${auto.modelo}">

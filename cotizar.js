@@ -79,6 +79,9 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         try {
+            const modal = document.getElementById("modalExito");
+            const mensaje = document.getElementById("mensajeExito");
+            const btnVolver = document.getElementById("btnVolver");
             const res = await fetch("http://localhost:3000/api/cotizaciones", {
                 method: "POST",
                 headers: {
@@ -89,9 +92,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (!res.ok) throw new Error("Error al guardar");
 
-            alert(`✅ ¡Gracias! Hemos guardado tu cotización del ${auto.marca} ${auto.modelo}.`);
+            mensaje.textContent =
+                `Tu cotización del ${auto.marca} ${auto.modelo} fue guardada correctamente.`;
 
-            window.location.href = "index.html";
+            modal.classList.remove("oculto");
+
+            // botón volver
+            btnVolver.onclick = () => {
+                window.location.href = "index.html";
+            };
 
         } catch (error) {
             console.error(error);

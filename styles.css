@@ -1,6 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f6f9;
+    scroll-behavior: smooth;
     color: #333;
 }
 
@@ -14,6 +15,13 @@ img {
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+.tarjeta-auto,
+input,
+select {
+  transition: all 0.25s ease;
 }
 
 header {
@@ -67,63 +75,82 @@ header p {
     justify-items: center;
 }
 
+#contenedorAutos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 20px;
+  margin: auto;
+  justify-items: center;
+}
+
 .tarjeta-auto {
-    background-color: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    max-width: 320px;
-    width: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 0.6s ease forwards;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .tarjeta-auto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 .tarjeta-auto img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
 .tarjeta-auto h2 {
-    font-size: 1.2rem;
-    margin: 10px 15px 5px;
+  font-size: 1.2rem;
+  margin: 12px 16px 4px;
 }
 
 .tarjeta-auto .anio,
 .tarjeta-auto .tipo {
-    margin: 0 15px;
-    font-size: 0.9rem;
-    color: #666;
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0 16px;
 }
 
 .tarjeta-auto .precio {
-    margin: 10px 15px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #1f3b73;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ff6600;
+  margin: 10px 16px;
 }
 
 .btn-cotizar {
-    margin: 15px;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    background-color: #1f3b73;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+  background: linear-gradient(135deg, #ff7a00, #ff5500);
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .btn-cotizar:hover {
-    background-color: #16305c;
-    transform: scale(1.03);
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(255, 122, 0, 0.4);
+}
+
+.btn-cotizar:active {
+  transform: scale(0.97);
 }
 
 .finalP {
@@ -274,6 +301,64 @@ header p {
 
 .btn-enviar:hover {
     background-color: #219150;
+}
+
+.modal-exito {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-exito.oculto {
+  display: none;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+  animation: aparecerModal 0.35s ease;
+}
+
+.modal-contenido h2 {
+  color: #16a34a;
+  margin-bottom: 10px;
+}
+
+.modal-contenido button {
+  margin-top: 15px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #ff6600;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal-contenido button:hover {
+  background: #e65c00;
+}
+
+@keyframes aparecerModal {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 
